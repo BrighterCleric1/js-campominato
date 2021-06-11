@@ -48,6 +48,10 @@ if (difficulty === 0) {
 
 while (userListNum.length < differenza) {
     var userNum = parseInt(prompt("Inserisci un numero"));
+    while (isNaN(userNum)){
+        alert("non hai inserito un numero");
+        userNum = parseInt(prompt("Inserisci un numero"));
+    }
     if (!userListNum.includes(userNum)){
         if (!compListNum.includes(userNum)){
             userListNum.push(userNum);
