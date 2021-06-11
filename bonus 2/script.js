@@ -53,8 +53,12 @@ function pluto () {
             if (!compListNum.includes(userNum)){
                 userListNum.push(userNum);
                 console.log(userListNum)
+            } else {
+                alert("hai trollato");
+                break;
             }
         } else {
+            alert("hai già inserito il numero");
             break;
         }
     }
