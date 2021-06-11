@@ -20,7 +20,7 @@ console.log(compListNum);
 
 while (userListNum.length < 84) {
     var userNum = parseInt(prompt("Inserisci un numero"));
-    while (isNaN(userNum) || userNum > maxNum){
+    while (isNaN(userNum) || userNum > 100){
         alert("non hai inserito un numero o numero errato");
         userNum = parseInt(prompt("Inserisci un numero"));
     }
