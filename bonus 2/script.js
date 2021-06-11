@@ -27,7 +27,7 @@ function pippo (){
         differenza = maxNum - 16;
         document.getElementById("user-num").placeholder = "Numero da 1 a " + maxNum;
     }
-    //svuoto
+    //svuoto nel caso dovessi cambiare difficoltà
     compListNum = [];
     // doppia condizione per non looparlo
     while (compListNum.length < 16 && diffValue !== undefined) {
