@@ -73,7 +73,7 @@ while (userListNum.length < differenza) {
 console.log(userListNum);
 document.getElementById("result").innerHTML ="Hai inserito " + userListNum.length + " numeri"; 
 
-if (userNum.length === differenza){
+if (userListNum.length === differenza){
     alert("hai vinto");
 } 
 

@@ -5,7 +5,6 @@ var userListNum = [];
 var maxNum;
 var differenza;
 
-
 function pippo (){
     for (var i = 0; i < diff.length; i++) {
         if (diff[i].checked){
@@ -18,12 +17,15 @@ function pippo (){
     } else if (diffValue === 0) {
         maxNum = 100;
         differenza = maxNum - 16;
+        document.getElementById("user-num").placeholder = "Numero da 1 a " + maxNum;
     } else if (diffValue ===  1){
         maxNum = 80;
         differenza = maxNum - 16;
+        document.getElementById("user-num").placeholder = "Numero da 1 a " + maxNum;
     } else if (diffValue === 2) {
         maxNum = 50;
         differenza = maxNum - 16;
+        document.getElementById("user-num").placeholder = "Numero da 1 a " + maxNum;
     }
     //svuoto
     compListNum = [];
@@ -44,22 +46,29 @@ function randomNum (min, max) {
 var userNumNot = document.getElementById("user-num");
 var userNum = parseInt(userNumNot.value);
 
-
 function pluto () {
     userNum = parseInt(userNumNot.value);
     console.log("Il numero utente inserito è: " + userNum);
-    while (userListNum.length < differenza) {
-        if (!userListNum.includes(userNum)){
+        if(diffValue === undefined){
+            alert("scegli prima una difficoltà")
+        } else if (!userListNum.includes(userNum) && userNum < maxNum && userNum > 0){
             if (!compListNum.includes(userNum)){
                 userListNum.push(userNum);
                 console.log(userListNum)
             } else {
                 alert("hai trollato");
-                break;
+                location.reload();
             }
         } else {
-            alert("hai già inserito il numero");
-            break;
+            alert("hai già inserito il numero o non era corretto");
         }
-    }
+    document.getElementById("result").innerHTML = "Sei arrivato a: " + userListNum.length ; 
+    if (userListNum.length === differenza){
+        alert("hai vinto");
+        location.reload();
+    }   
 }
+
+
+
+
