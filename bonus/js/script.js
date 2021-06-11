@@ -13,22 +13,30 @@ while (difficulty !== 0 && difficulty !== 1 && difficulty !== 2){
 
 
 var maxNum = 100;
+var differenza = 84;
 /*if (difficulty === 0) {
-    maxNum = 100
+    maxNum = 100;
+    differenza = maxNum - 16;
 } else if (difficulty ===  1){
-    maxNum = 80
+    maxNum = 80;
+    differenza = maxNum - 16;
 } else if (difficulty === 2) {
-    maxNum = 50
+    maxNum = 50;
+    differenza = maxNum - 16;
 }*/
+
 switch (difficulty) {
     case 0:
         maxNum = 100;
+        differenza = maxNum - 16;
         break;
     case 1:
         maxNum = 80;
+        differenza = maxNum - 16;
         break;
     case 2:
         maxNum = 50;
+        differenza = maxNum - 16;
         break;        
 }
 
@@ -42,30 +50,6 @@ if(!compListNum.includes(randomCompNum)){
 
 document.getElementById("result2").innerHTML ="<br/>" + compListNum
 console.log(compListNum);
-
-
-var differenza = 84;
-/*if (difficulty === 0) {
-    differenza = 100 - 16
-} else if (difficulty ===  1){
-    differenza = 80 - 16
-} else if (difficulty === 2) {
-    differenza = 50 - 16
-}*/
-
-switch (difficulty) {
-    case 0:
-        differenza = 100 - 16;
-        break;
-    case 1:
-        differenza = 80 - 16;
-        break;
-    case 2:
-        differenza = 50 - 16;
-        break;        
-}
-
-
 
 while (userListNum.length < differenza) {
     var userNum = parseInt(prompt("Inserisci un numero"));
