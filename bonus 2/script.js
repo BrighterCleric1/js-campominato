@@ -42,21 +42,20 @@ function randomNum (min, max) {
 }
 
 var userNumNot = document.getElementById("user-num");
-var userNum = userNumNot.value;
+var userNum = parseInt(userNumNot.value);
 
 
 function pluto () {
+    userNum = parseInt(userNumNot.value);
+    console.log("Il numero utente inserito è: " + userNum);
     while (userListNum.length < differenza) {
-        if (!userListNum.includes(parseInt(userNumNot.value))){
-            if (!compListNum.includes(parseInt(userNumNot.value))){
-                userListNum.push(parseInt(userNumNot.value));
-            }
-            else {
-                alert("hai perso");
-                break;
+        if (!userListNum.includes(userNum)){
+            if (!compListNum.includes(userNum)){
+                userListNum.push(userNum);
+                console.log(userListNum)
             }
         } else {
-            alert("hai gia inserito il numero");
+            break;
         }
     }
 }
