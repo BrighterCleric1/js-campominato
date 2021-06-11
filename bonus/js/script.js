@@ -13,14 +13,24 @@ while (difficulty !== 0 && difficulty !== 1 && difficulty !== 2){
 
 
 var maxNum = 100;
-if (difficulty === 0) {
+/*if (difficulty === 0) {
     maxNum = 100
 } else if (difficulty ===  1){
     maxNum = 80
 } else if (difficulty === 2) {
     maxNum = 50
+}*/
+switch (difficulty) {
+    case 0:
+        maxNum = 100;
+        break;
+    case 1:
+        maxNum = 80;
+        break;
+    case 2:
+        maxNum = 50;
+        break;        
 }
-
 
 
 while (compListNum.length < 16) {
@@ -35,14 +45,25 @@ console.log(compListNum);
 
 
 var differenza = 84;
-if (difficulty === 0) {
+/*if (difficulty === 0) {
     differenza = 100 - 16
 } else if (difficulty ===  1){
     differenza = 80 - 16
 } else if (difficulty === 2) {
     differenza = 50 - 16
-}
+}*/
 
+switch (difficulty) {
+    case 0:
+        differenza = 100 - 16;
+        break;
+    case 1:
+        differenza = 80 - 16;
+        break;
+    case 2:
+        differenza = 50 - 16;
+        break;        
+}
 
 
 
