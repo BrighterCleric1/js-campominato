@@ -40,5 +40,23 @@ function pippo (){
 function randomNum (min, max) {
     return Math.floor(Math.random() * (max - min +1)) + min;
 }
-    
 
+var userNumNot = document.getElementById("user-num");
+var userNum = userNumNot.value;
+
+
+function pluto () {
+    while (userListNum.length < differenza) {
+        if (!userListNum.includes(parseInt(userNumNot.value))){
+            if (!compListNum.includes(parseInt(userNumNot.value))){
+                userListNum.push(parseInt(userNumNot.value));
+            }
+            else {
+                alert("hai perso");
+                break;
+            }
+        } else {
+            alert("hai gia inserito il numero");
+        }
+    }
+}
