@@ -75,6 +75,6 @@ document.getElementById("result").innerHTML ="Hai inserito " + userListNum.lengt
 
 if (userNum.length === differenza){
     alert("hai vinto");
-} else {
-    alert("hai perso");
-}
+} 
+
+alert("Il tuo puntegggio è " + userListNum.length);
