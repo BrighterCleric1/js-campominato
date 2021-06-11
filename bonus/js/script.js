@@ -69,8 +69,8 @@ switch (difficulty) {
 
 while (userListNum.length < differenza) {
     var userNum = parseInt(prompt("Inserisci un numero"));
-    while (isNaN(userNum)){
-        alert("non hai inserito un numero");
+    while (isNaN(userNum) || userNum > maxNum){
+        alert("non hai inserito un numero o numero errato");
         userNum = parseInt(prompt("Inserisci un numero"));
     }
     if (!userListNum.includes(userNum)){
